@@ -86,11 +86,11 @@ func putHaproxyConf(value []byte) error {
 	} else if !reflect.DeepEqual(conf, haproxyConf) {
 		// format data for template
 		data := []struct {
-    	Server string
+			Server string
 			Weight int
-		} {
-    	{conf.Servers[0], 256 - conf.Subtrahend},
-	    {conf.Servers[1], conf.Subtrahend},
+		}{
+			{conf.Servers[0], 256 - conf.Subtrahend},
+			{conf.Servers[1], conf.Subtrahend},
 		}
 
 		// rewrite config file
@@ -106,9 +106,9 @@ func putHaproxyConf(value []byte) error {
 			if err := exec.Command(cmd[0], cmd[1:]...).Run(); err != nil {
 				return err
 			}
-		} else if _, err := writeSocket("set weight http-in/"+conf.Servers[0]+" "+strconv.Itoa(256 - conf.Subtrahend)); err != nil {
+		} else if _, err := writeSocket("set weight http-in/" + conf.Servers[0] + " " + strconv.Itoa(256-conf.Subtrahend)); err != nil {
 			return err
-		} else if _, err := writeSocket("set weight http-in/"+conf.Servers[1]+" "+strconv.Itoa(conf.Subtrahend)); err != nil {
+		} else if _, err := writeSocket("set weight http-in/" + conf.Servers[1] + " " + strconv.Itoa(conf.Subtrahend)); err != nil {
 			return err
 		}
 	}
