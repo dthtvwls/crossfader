@@ -1,0 +1,11 @@
+package: github.com/dthtvwls/crossfader
+import:
+- package: github.com/docker/libkv
+  version: ~0.2.1
+- package: github.com/samuel/go-zookeeper
+  subpackages:
+  - zk
+- package: github.com/coreos/etcd
+  version: ~3.1.0-rc.0
+  subpackages:
+  - client

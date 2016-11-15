@@ -1,0 +1,39 @@
+hash: 9c4c387a371e547696f94c7f05eb8b3806bb7101eedaef75af4b77d438e643b7
+updated: 2016-11-10T06:59:23.998009433Z
+imports:
+- name: github.com/coreos/etcd
+  version: 83347907774bf36cbb261c594a32fd7b0f5dd9f6
+  subpackages:
+  - client
+  - pkg/pathutil
+  - pkg/types
+- name: github.com/docker/libkv
+  version: aabc039ad04deb721e234f99cd1b4aa28ac71a40
+  subpackages:
+  - store
+  - store/consul
+  - store/etcd
+  - store/zookeeper
+- name: github.com/hashicorp/consul
+  version: b2cdba8fcf3b7786e927efea024078f9b3a1bc78
+  subpackages:
+  - api
+- name: github.com/hashicorp/go-cleanhttp
+  version: ad28ea4487f05916463e2423a55166280e8254b5
+- name: github.com/hashicorp/serf
+  version: f679d7594a349263f6118db40d87122d3a474e7d
+  subpackages:
+  - coordinate
+- name: github.com/samuel/go-zookeeper
+  version: 1d7be4effb13d2d908342d349d71a284a7542693
+  subpackages:
+  - zk
+- name: github.com/ugorji/go
+  version: f1f1a805ed361a0e078bb537e4ea78cd37dcf065
+  subpackages:
+  - codec
+- name: golang.org/x/net
+  version: 6acef71eb69611914f7a30939ea9f6e194c78172
+  subpackages:
+  - context
+testImports: []
